@@ -18,6 +18,10 @@ output = query({"inputs": text})
 
 
 if submit_button:
-    st.subheader('Data')
-    st.write({"NEGATIVE": output[0][0]['score']})
-    st.write({"POSITIVE": output[0][1]['score']})
+    st.subheader('Text Classification')
+    
+    if type(output) == type({}):        
+        st.write({"Error": 'The model is loading, please try again in 30 seconds.'})
+    else:
+        st.write({"NEGATIVE": output[0][0]['score']})
+        st.write({"POSITIVE": output[0][1]['score']})
