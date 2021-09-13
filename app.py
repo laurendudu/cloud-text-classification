@@ -4,7 +4,7 @@ import requests
 API_URL = "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english"
 headers = {"Authorization": f"Bearer api_sCckSmiuxDSOBIIdpXarxzeJEyQbWwRYVr"}
 
-st.title('Hello World!')
+st.title('Text Classification')
 
 form = st.form(key='my_form')
 text = form.text_input(label='Enter some text')
@@ -18,7 +18,7 @@ output = query({"inputs": text})
 
 
 if submit_button:
-    st.subheader('Text Classification')
+    st.subheader('Sentiment Analysis')
     
     if type(output) == type({}):        
         st.write({"Error": 'The model is loading, please try again in 30 seconds.'})
