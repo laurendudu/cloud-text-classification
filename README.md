@@ -1,4 +1,4 @@
-# Streamlit to Heroku (example)
+# Streamlit to Heroku (side-project)
 
 ## Setup
 
@@ -26,4 +26,5 @@ https://cloud-text-classification.herokuapp.com/
 ## Group
 
 This project was done by Sirine Haddouche and Lauren Durivault.
+
 https://github.com/sirinehaddouche
