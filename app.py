@@ -1,8 +1,12 @@
 import streamlit as st
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 API_URL = "https://api-inference.huggingface.co/models/distilbert-base-uncased-finetuned-sst-2-english"
-headers = {"Authorization": f"Bearer api_sCckSmiuxDSOBIIdpXarxzeJEyQbWwRYVr"}
+headers = {"Authorization": f"Bearer " + os.getenv('API_KEY')}
 
 st.title('Text Classification')
 
